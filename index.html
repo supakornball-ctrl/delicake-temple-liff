@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>รับสิทธิ์ส่วนลด Delicake (งานวัด)</title>
+    <title>ลูกค้า Delicake จากวัด</title>
     <!-- โหลด LINE SDK -->
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <style>
@@ -20,7 +20,7 @@
 <body>
 
     <div class="card">
-        <h2>Delicake x Partner</h2>
+        <h2>Delicake..พร้อมให้บริการ </h2>
         <p id="shop-name" class="loading">กำลังโหลดข้อมูล...</p>
         
         <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
@@ -58,7 +58,7 @@
             partnerShopId = shop || "GENERAL";
             displayShopName = name || partnerShopId;
 
-            document.getElementById('shop-name').innerHTML = `รหัสผู้แนะนำ: <b>${displayShopName}</b>`;
+            document.getElementById('shop-name').innerHTML = `ลูกค้า VIP ของวัด : <b>${displayShopName}</b>`;
         }
 
         // เริ่มต้นใช้งาน LIFF
@@ -87,7 +87,7 @@
                     document.getElementById('user-info').innerHTML = `
                         <img class="profile" src="${profile.pictureUrl}" alt="Profile">
                         <h3>คุณ ${profile.displayName}</h3>
-                        <p>พร้อมรับสิทธิ์ส่วนลดพิเศษจาก Delicake แล้ว</p>
+                        <p>ลูกค้าสามารถกดปุ่มด้านล่าง แอดมินพร้อมดูแล</p>
                     `;
                     document.getElementById('submit-btn').style.display = "block";
                 })
@@ -127,7 +127,7 @@
             .catch(error => {
                 console.error('Error:', error);
                 alert("เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง");
-                btn.innerText = "กดเพื่อรับสิทธิ์ส่วนลด";
+                btn.innerText = "กดปุ่มเพื่อดูเมนูและสอบถามข้อมูล";
                 btn.disabled = false;
             });
         }
